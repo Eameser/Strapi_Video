@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_strapi/second_page.dart';
 import 'package:video_strapi/video_details.dart';
 import 'package:video_strapi/video_lib.dart';
 
@@ -33,7 +34,8 @@ class _HomeState extends State<Home> {
 
   List pages = [
     VideoLibrary(),
-    VideoDetails(),
+    SecondPage(),
+    //VideoDetails(),
   ];
   int currentIndex = 1;
 
@@ -51,12 +53,12 @@ class _HomeState extends State<Home> {
           body:pages[currentIndex],
           bottomNavigationBar: BottomNavigationBar(
             //backgroundColor: Colors.transparent,
-            backgroundColor: Colors.black54,
-            selectedItemColor: Colors.white,
-            unselectedItemColor: Colors.black,
+            backgroundColor: Colors.black,
+            selectedItemColor: Colors.lime,
+            unselectedItemColor: Colors.white,
             items: [
               BottomNavigationBarItem(icon: Icon(Icons.home), label: 'library'),
-              BottomNavigationBarItem(icon: Icon(Icons.airplay), label: 'Details'),
+              BottomNavigationBarItem(icon: Icon(Icons.airplay), label: 'smthn'),
             ],
             currentIndex: currentIndex,
             onTap: onTap,
